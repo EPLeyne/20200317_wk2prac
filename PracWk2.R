@@ -40,7 +40,7 @@ Q3 <- inner_join(observationsQ3, tidy_stations, by = "Station_number") %>%
   summarise(mean_tdiff = mean((as.numeric(max) - as.numeric(min)))) %>% 
   filter(mean_tdiff == min(mean_tdiff))
 
-# Does the westmost (lowest longitude) or eastmost (highest longitude) weather station in our dataset have a higher average solar exposure?
+#Q4 Does the westmost (lowest longitude) or eastmost (highest longitude) weather station in our dataset have a higher average solar exposure?
 observationsQ4 <- BOM_data %>% 
   select(c('Station_number', 'Solar_exposure')) %>% 
   filter(Solar_exposure != '-')
