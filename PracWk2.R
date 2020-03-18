@@ -3,7 +3,7 @@ library(tidyverse)
 BOM_data <- read_csv('data/BOM_data.csv')
 BOM_stations <- read_csv('data/BOM_stations.csv')
 
-#Q1
+#Q1 For each station, how many days have a minimum temperature, a maximum temperature and a rainfall measurement recorded?
 Q1 <- BOM_data %>% 
   select(c('Station_number', 'Temp_min_max', 'Rainfall')) %>% 
   separate(Temp_min_max, c('min', 'max'), sep = '/') %>% 
